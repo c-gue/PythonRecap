@@ -1,5 +1,9 @@
 # This program uses a dictionary as a deck of cards.
 
+from email.errors import HeaderMissingRequiredValue
+import random
+
+
 def main():
     # Create a deck of cards.
     deck = create_deck()
@@ -10,10 +14,8 @@ def main():
 
 
     # Deal the cards.
-    deal_cards(deck, num_cards)
+    deal_cards(deck,num_cards)
 
-    
-    
 
 # The create_deck function returns a dictionary
 # representing a deck of cards.
@@ -54,30 +56,50 @@ def create_deck():
 
 def deal_cards(deck, number):
     # Initialize an accumulator for the hand value.
-    hand_value = 0
+ 
+    hand = 0
     
     
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
-    if number > len(deck):
-        number = len(deck)
     
+    if number > len(deck):
+        number = len(deal_cards)
+        
     
 
     # Deal the cards and accumulate their values.
-    for x in range(number):
+    '''
+    import random
+
+    for value in deck.values():
+        random_card = deck[random.choice(list(deck))]
+
+        hand += random_card
+        num_cards += 1
+
+        print(random_card)
+
+        input()
+
+    for count in range(number):
         card, value = deck.popitem()
         print(card)
-        hand_value += value
-    
+        hand += value
+    '''
+    import random
+    for count in range(number):
+        card = random.choice(list(deck))
+        value = deck[card]
+        print(card)
+        hand += value
 
-
-    
+        del deck[card]
 
     # Display the value of the hand.
-    print('Value of this hand:', hand_value)
-    
+
+    print("Value of this hand:",hand)
     
 
 # Call the main function.

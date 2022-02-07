@@ -18,6 +18,9 @@ room-number,use,sq-ft,price
 
 
 
+from re import L
+
+
 datastore = { "medical":[
       { "room-number": 100,
         "use": "reception",
@@ -47,3 +50,18 @@ datastore = { "medical":[
 
       ]
 }
+
+
+outfile = open('retail_space.csv','w')
+outfile.write('room-number,use,sq-ft,price\n')
+
+#for loop
+mylist = datastore["medical"]
+print(type(mylist))
+
+for l in mylist:
+  print(l)
+  outfile.write(str(l["room-number"])+','+l["use"]+','+str(l["sq-ft"])+','+str(l['price'])+'\n')
+
+
+outfile.close
