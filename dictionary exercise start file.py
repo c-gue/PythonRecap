@@ -1,12 +1,12 @@
 # This program uses a dictionary as a deck of cards.
 
-from email.errors import HeaderMissingRequiredValue
+#from email.errors import HeaderMissingRequiredValue
 import random
 
 
 def main():
     # Create a deck of cards.
-    deck = create_deck()
+   
 
     # Get the number of cards to deal.
     num_cards = int(input('How many cards should I deal? '))
@@ -14,7 +14,11 @@ def main():
 
 
     # Deal the cards.
-    deal_cards(deck,num_cards)
+#<<<<<<< HEAD:dictionary exercise start file.py
+    #deal_cards(deck,num_cards)
+#=======
+
+#>>>>>> 8d356034c3abd1e37c436745f343a43ae109866a:3_dictionary exercise start file.py
 
 
 # The create_deck function returns a dictionary
@@ -47,7 +51,7 @@ def create_deck():
             'Queen of Diamonds':10, 'King of Diamonds': 10}
 
     # Return the deck.
-    return deck
+
 
 
 
@@ -56,13 +60,21 @@ def create_deck():
 
 def deal_cards(deck, number):
     # Initialize an accumulator for the hand value.
+#<<<<<<< HEAD:dictionary exercise start file.py
  
     hand = 0
+#=======
+
+#>>>>>>> 8d356034c3abd1e37c436745f343a43ae109866a:3_dictionary exercise start file.py
     
     
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
+#<<<<<<< HEAD:dictionary exercise start file.py
+#======
+
+#>>>>>>> 8d356034c3abd1e37c436745f343a43ae109866a:3_dictionary exercise start file.py
     
     if number > len(deck):
         number = len(deal_cards)
@@ -70,6 +82,7 @@ def deal_cards(deck, number):
     
 
     # Deal the cards and accumulate their values.
+#<<<<<<< HEAD:dictionary exercise start file.py
     '''
     import random
 
@@ -94,12 +107,19 @@ def deal_cards(deck, number):
         value = deck[card]
         print(card)
         hand += value
+#=======
+    
+#>>>>>>> 8d356034c3abd1e37c436745f343a43ae109866a:3_dictionary exercise start file.py
 
         del deck[card]
 
     # Display the value of the hand.
 
+#<<<<<<< HEAD:dictionary exercise start file.py
     print("Value of this hand:",hand)
+#=======
+    
+#>>>>>>> 8d356034c3abd1e37c436745f343a43ae109866a:3_dictionary exercise start file.py
     
 
 # Call the main function.
